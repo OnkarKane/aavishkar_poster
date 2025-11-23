@@ -7,12 +7,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#fcfbf8; --accent:#1f6f4d; --muted:#e9f2f0; --panel:#f6f0e0; --pill:#dff0e8; --text:#0b1b17;
+      --bg:#f0f7fa; /* light medical blue */
+      --accent:#0b6fa4; /* deep medical blue */
+      --muted:#d9eef5; /* soft clinical blue */
+      --panel:#eaf6fc; /* light medical panel */
+      --pill:#c8e8f0; /* soft teal */
+      --text:#073b4c; /* dark medical text */
       --card-radius:18px; --gutter:22px;
     }
     *{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
-    body{margin:0;background:var(--bg);color:var(--text);padding:30px}
-    .poster{max-width:900px;margin:0 auto;border-radius:14px;padding:28px;background:#fff;box-shadow:0 10px 30px rgba(10,10,10,0.06); transform:scale(0.75); transform-origin: top left; width:1200px;}
+    body{margin:0;background:var(--bg);color:var(--text);padding:30px;
+  /* subtle medical cross pattern */
+  background-image:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><text x="5" y="25" font-size="20" opacity="0.06">⚕️</text></svg>');
+  background-size:40px 40px;
+}
+    .poster{width:1000px;height:1000px;margin:0 auto;border-radius:14px;padding:40px;background:#ffffff;box-shadow:0 10px 30px rgba(10,10,10,0.06);transform:none;display:flex;flex-direction:column;justify-content:flex-start;gap:20px;}
     .header{display:flex;align-items:center;justify-content:space-between;padding:8px 6px}
     .event{text-align:center;flex:1}
     .event h1{margin:0;color:#9b1620;font-size:36px;font-weight:700}
@@ -27,20 +37,20 @@
     .grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
     .col{background:transparent}
 
-    .card{background:var(--muted);padding:18px;border-radius:14px;min-height:90px}
+    .card{background:var(--muted);padding:18px;border-radius:14px;min-height:90px;box-shadow:0 3px 8px rgba(0,0,0,0.08);}{background:var(--muted);padding:18px;border-radius:14px;min-height:90px}
     .card h3{margin:0 0 8px 0;font-size:20px}
     .card p{margin:0;font-size:15px;line-height:1.45}
 
     .objective{background:var(--panel);padding:18px;border-radius:14px}
 
     .services{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-    .service-card{background:#fbf7e9;border-radius:12px;padding:14px}
+    .service-card{background:#fbf7e9;border-radius:12px;padding:14px;box-shadow:0 3px 8px rgba(0,0,0,0.08);}{background:#fbf7e9;border-radius:12px;padding:14px}
     .service-card h4{margin:0 0 8px 0}
     .service-list{margin:0;padding-left:18px}
 
     .right-col{display:flex;flex-direction:column;gap:12px}
-    .significance{background:#e6f3e9;border-radius:12px;padding:14px}
-    .method{background:#e9f2f8;border-radius:12px;padding:14px}
+    .significance{background:#e6f3e9;border-radius:12px;padding:14px;box-shadow:0 3px 8px rgba(0,0,0,0.08);}{background:#e6f3e9;border-radius:12px;padding:14px}
+    .method{background:#e9f2f8;border-radius:12px;padding:14px;box-shadow:0 3px 8px rgba(0,0,0,0.08);}{background:#e9f2f8;border-radius:12px;padding:14px}
 
     .phone-placeholder{background:linear-gradient(180deg,#0f3550,#14466a);border-radius:20px;padding:10px;color:#fff;display:flex;align-items:center;justify-content:center}
 
@@ -126,7 +136,7 @@
         </div>
 
         <!-- If you have a poster image you want to include, update the src below with the provided local path. -->
-        <div style="background:#f0f7f4;border-radius:12px;padding:18px;text-align:center;color:#134b35;font-weight:600;font-size:18px;">Enhancing Healthcare Through Digital Prescription Management 🌿📄</div>
+        <div style="background:#f0f7f4;border-radius:12px;padding:18px;text-align:center;color:#134b35;font-weight:600;font-size:18px;">Enhancing Healthcare Through Digital Prescription Management 🩺📋</div>
 
       </aside>
     </div>
