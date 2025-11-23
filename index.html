@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MediScan — Poster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fcfbf8; --accent:#1f6f4d; --muted:#e9f2f0; --panel:#f6f0e0; --pill:#dff0e8; --text:#0b1b17;
+      --card-radius:18px; --gutter:22px;
+    }
+    *{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);padding:30px}
+    .poster{max-width:900px;margin:0 auto;border-radius:14px;padding:28px;background:#fff;box-shadow:0 10px 30px rgba(10,10,10,0.06); transform:scale(0.75); transform-origin: top left; width:1200px;}
+    .header{display:flex;align-items:center;justify-content:space-between;padding:8px 6px}
+    .event{text-align:center;flex:1}
+    .event h1{margin:0;color:#9b1620;font-size:36px;font-weight:700}
+    .event p{margin:4px 0;color:#0d3b5a;font-weight:600}
+
+    .meta{display:flex;justify-content:space-between;margin-top:12px;gap:12px}
+    .meta .left,.meta .right{font-weight:600;color:#0d3b5a}
+
+    .title-band{background:var(--accent);color:#fff;padding:28px;border-radius:10px;margin:18px 0;text-align:center}
+    .title-band h2{margin:0;font-size:36px;line-height:1.05}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
+    .col{background:transparent}
+
+    .card{background:var(--muted);padding:18px;border-radius:14px;min-height:90px}
+    .card h3{margin:0 0 8px 0;font-size:20px}
+    .card p{margin:0;font-size:15px;line-height:1.45}
+
+    .objective{background:var(--panel);padding:18px;border-radius:14px}
+
+    .services{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+    .service-card{background:#fbf7e9;border-radius:12px;padding:14px}
+    .service-card h4{margin:0 0 8px 0}
+    .service-list{margin:0;padding-left:18px}
+
+    .right-col{display:flex;flex-direction:column;gap:12px}
+    .significance{background:#e6f3e9;border-radius:12px;padding:14px}
+    .method{background:#e9f2f8;border-radius:12px;padding:14px}
+
+    .phone-placeholder{background:linear-gradient(180deg,#0f3550,#14466a);border-radius:20px;padding:10px;color:#fff;display:flex;align-items:center;justify-content:center}
+
+    .footer{display:flex;gap:14px;margin-top:18px}
+    .footer .left{flex:1}
+    .tech-list{margin:0;padding-left:18px}
+
+    @media print{body{padding:0} .poster{box-shadow:none}}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.title-band h2{font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="poster" role="document">
+    <div class="header">
+      <div style="width:140px"></div>
+      <div class="event">
+        <h1>Aavishkar</h1>
+        <p>Inter‑Collegiate/Institute/Department Research Convention</p>
+        <div class="meta" style="margin-top:6px">
+          <div class="left">Category: _____________________ </div>
+          <div class="right">Level: UG</div>
+        </div>
+      </div>
+      <div style="width:140px"></div>
+    </div>
+
+    <div class="title-band">
+      <h2>MediScan — Digitalising Medical Prescription</h2>
+    </div>
+
+    <div class="grid">
+      <div class="col">
+        <div class="card" style="background:var(--muted)">
+          <h3>Introduction</h3>
+          <p>MediScan is an app that converts handwritten prescriptions into digital text, sets medication reminders, and enables easy sharing of prescription data. It improves accessibility, accuracy, and medication management for users.</p>
+        </div>
+
+        <div class="objective" style="margin-top:14px">
+          <h3 style="font-size:20px;margin:0 0 8px 0">Objective 🎯</h3>
+          <p>To digitalise medical prescriptions and provide transparency in the medications prescribed and taken, while improving the user’s overall quality of life (QoL).</p>
+        </div>
+
+        <div class="services" style="margin-top:16px">
+          <div class="service-card">
+            <h4 style="font-size:18px">User 👤</h4>
+            <ul class="service-list">
+              <li>Instantly scans handwritten prescriptions</li>
+              <li>Receives timely medication reminders</li>
+              <li>Shares medication history using simple copy‑paste</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h4 style="font-size:18px">Doctor / Pharmacy 🧑‍⚕️💊</h4>
+            <ul class="service-list">
+              <li>Although services mainly support patients, doctors and pharmacists benefit from easily accessing clean, digital prescription history for accurate understanding</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="right-col">
+        <div class="significance">
+          <h3 style="margin:0 0 8px 0">Significance</h3>
+          <ul style="margin:0;padding-left:18px;line-height:1.6">
+            <li>Reduces medication errors</li>
+            <li>Improves adherence through timely reminders</li>
+            <li>Enables faster and easier access to medication history</li>
+            <li>Facilitates communication with healthcare providers</li>
+            <li>Helps maintain well‑organized and accessible medical records</li>
+          </ul>
+        </div>
+
+        <div class="method">
+          <h3 style="margin:0 0 8px 0">Methodology: Technology Used</h3>
+          <ul class="tech-list">
+            <li>OCR (Optical Character Recognition)</li>
+            <li>Gemini Model (AI processing)</li>
+            <li>Firebase (Backend & database)</li>
+            <li>Kotlin (App development)</li>
+          </ul>
+        </div>
+
+        <!-- If you have a poster image you want to include, update the src below with the provided local path. -->
+        <div style="background:#f0f7f4;border-radius:12px;padding:18px;text-align:center;color:#134b35;font-weight:600;font-size:18px;">Enhancing Healthcare Through Digital Prescription Management 🌿📄</div>
+
+      </aside>
+    </div>
+
+    <div class="footer">
+      <div class="left" style="font-size:13px;color:#47585a">
+        <strong>References / Notes:</strong> Project prepared for Aavishkar research convention. <br/>Poster content: MediScan — Digitalising Medical Prescription.
+      </div>
+      <div style="width:220px;text-align:right;font-size:13px;color:#47585a"> • Prepared by: Onkar Kane <br/> • Guide: Tejaswee Pol <br/> • Dept: Computer Science</div>
+    </div>
+
+  </div>
+</body>
+</html>
